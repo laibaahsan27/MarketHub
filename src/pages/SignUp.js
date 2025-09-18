@@ -8,7 +8,7 @@ export default function SignUp() {
 
     const handleSubmit = async () => {
         try {
-            await axios.post('http://localhost:5000/api/auth/register', { email, password });
+            await axios.post('https://markethub-backend-fp2f.onrender.com/api/auth/register', { email, password });
             alert('User registered successfully!');
         } catch (err) {
             alert(err.response?.data?.error || 'Error registering');
